@@ -1,12 +1,13 @@
-import './CartItem.css';
+import './CartItem.css'
 
 function CartItem({ item, onRemove }) {
   return (
     <div className="cart-item">
-      <span>{item.name}</span>
-      <span>${item.price.toFixed(2)}</span>
-      <button onClick={() => onRemove(item.id)}>Remove</button>
+      <h3>{item.name}</h3>
+      <p>Price: ${item.price}</p>
+      <button onClick={onRemove}>Remove</button>
     </div>
   );
 }
+
 export default CartItem;
